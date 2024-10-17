@@ -5,7 +5,7 @@ from city import capitals
 
 def data_get():
     city = city_name.get()
-    data = requests.get('https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=c14eae044bf1a7f1f9303135af30edf8').json()
+    data = requests.get('https://api.openweathermap.org/data/2.5/weather?q='+city+'API').json()
     w_label_1.config(text = data["weather"][0]['main'])
     wd_label_1.config(text = data['weather'][0]["description"])
     temp_label_1.config(text = str(int(data['main']['temp']-273.15)) )
